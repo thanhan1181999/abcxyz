@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+	<session-factory>
+   		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+   		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+ 
+   		<!-- thông tin kết nối đến database -->
+   		<property name="hibernate.connection.url">
+   			jdbc:mysql://localhost:3306/hibernate_db?useSSL=false
+   		</property>
+	   	<property name="hibernate.connection.username">thanhan</property>
+	   	<property name="hibernate.connection.password">12345aA.</property>
+ 		<property name="hibernate.current_session_context_class">thread</property>
+ 		<property name="show_sql">true</property>
+ 		<property name="hibernate.hbm2ddl.auto">create</property>
+	   	
+	   	<!-- Danh sách các XML mapping file-->
+	  	<mapping resource="Employee.hbm.xml"/>
+	  	<mapping class="com.model.Cat"/>
+	  	<mapping class="com.model.Shoe"/>
+	</session-factory>
+</hibernate-configuration>
