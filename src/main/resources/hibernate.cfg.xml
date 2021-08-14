@@ -18,8 +18,9 @@
  		<property name="hibernate.hbm2ddl.auto">create</property>
 	   	
 	   	<!-- Danh sách các XML mapping file-->
-	  	<mapping resource="Employee.hbm.xml"/>
-	  	<mapping class="com.model.Cat"/>
-	  	<mapping class="com.model.Shoe"/>
+	  	<mapping class="com.model.Customer"/>
+	  	<mapping class="com.model.User"/>
+	  	<mapping class="com.model.UserId"/>
+	  	<mapping class="com.model.CustomerId"/>
 	</session-factory>
 </hibernate-configuration>
